@@ -24,7 +24,6 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
     try {
       const { data } = await login({
         variables: {
@@ -38,9 +37,9 @@ const Login = () => {
         dispatch(
           setCredentials({
             user: {
-              userId: data.login.userId,
-              fullName: data.login.fullName,
-              role: data.login.role,
+              userId: data.login.user.id,
+              fullName: data.login.user.fullName,
+              role: data.login.user.role,
             },
             token: data.login.token,
           })
@@ -70,7 +69,7 @@ const Login = () => {
           <div>
             <input
               type="password"
-              name="passowrd"
+              name="password"
               placeholder="Password"
               onChange={handleChange}
             />

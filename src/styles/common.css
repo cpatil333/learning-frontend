@@ -34,3 +34,28 @@ input {
   margin-top: 10px;
   font-size: 18px;
 }
+table {
+  width: 90%;
+  margin: auto;
+}
+thead tr th {
+  background-color: black;
+  color: #fff;
+}
+
+tbody tr td {
+  background-color: white;
+  border: 1px solid gray;
+}
+.btn-edit {
+  width: 100px;
+  padding: 10px;
+  margin: 10px;
+  background-color: rgba(30, 74, 250, 0.876);
+}
+.btn-delete {
+  width: 100px;
+  padding: 10px;
+  margin: 10px;
+  background-color: rgba(249, 22, 41, 0.876);
+}
