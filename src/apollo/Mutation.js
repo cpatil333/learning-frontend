@@ -23,3 +23,15 @@ export const USER_REGISTER = gql`
     }
   }
 `;
+
+export const USER_UPDATE = gql`
+  mutation ($updateRegister: UpdateUserInput!) {
+    updateUser(updateRegister: $updateRegister) {
+      id
+      fullName
+      email
+      role
+    }
+  }
+`;
+

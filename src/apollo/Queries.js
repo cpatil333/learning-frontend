@@ -10,3 +10,15 @@ export const USER_LIST = gql`
     }
   }
 `;
+
+export const GET_USER_ID = gql`
+  query ($userById: ID!) {
+    userById(id: $userById) {
+      id
+      fullName
+      email
+      password
+      role
+    }
+  }
+`;

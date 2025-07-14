@@ -3,15 +3,15 @@ import "../styles/navbar.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const location = useLocation();
   const navigate = useNavigate();
-  const path = location.pathname.toLowerCase();
   const token = localStorage.getItem("token") || "";
+  const location = useLocation();
+  const path = location.pathname.toLowerCase();
 
   if (!token && path !== "/login" && path !== "/register") {
     navigate("/login");
   }
-  
+
   const logout = () => {
     localStorage.removeItem("token");
     navigate("/login");

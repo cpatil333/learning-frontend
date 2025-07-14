@@ -39,7 +39,12 @@ const Home = () => {
               <td>{user.email}</td>
               <td>{user.role}</td>
               <td>
-                <button className="btn-edit">Edit</button>
+                <button
+                  className="btn-edit"
+                  onClick={() => navigate(`/edit-user/` + user.id)}
+                >
+                  Edit
+                </button>
                 <button className="btn-delete">Delete</button>
               </td>
             </tr>
